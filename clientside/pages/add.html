@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Donar</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color: rgb(187, 14, 14);
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: start;
+        gap: 10px;
+        padding: 20px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    input{
+        border-radius: 5px;
+        width:180px;
+        height:20px;
+    }
+    .submit{
+        width: 80px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: green;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+    }
+</style>
+<body>
+    <h1>Donar Details</h1>
+<form action="/submit" method="post">
+    <label for="name">Name:
+        <input type="text" name="name" placeholder="Name">
+    </label>
+    <label for="bloodtype">Blood Type:
+       <select name="bloodtype" id="bloodtype">Choose
+        <option value="O+ve"></option>
+        <option value="O-ve"></option>
+        <option value="AB+ve"></option>
+        <option value="AB-ve"></option>
+        <option value="A+ve"></option>
+       </select>
+    </label>
+    <label for="age">Age:
+        <input type="number" name="age" placeholder="Age">
+    </label>
+    <label for="weight">Weight:
+        <input type="number" name="weight" placeholder="weight">
+    </label>
+    <label for="phnumber">Phone Number:
+        <input type="tel" name="tel" placeholder="phone number">
+    </label>
+    <label for="date">Last Donated Date:
+        <input type="date" name="date">
+    </label>
+    <input type="submit" value="Submit" class="submit">
+</form>    
+</body>
+</html>
