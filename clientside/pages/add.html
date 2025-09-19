@@ -37,21 +37,39 @@
         font-weight: 600;
         border: none;
     }
+    .col1{ 
+        display: flex;
+        
+    }
+    .col2{
+        display: flex;
+        
+       
+    }
 </style>
 <body>
     <h1>Donar Details</h1>
 <form action="/submit" method="post">
+    <div class="col">
     <label for="name">Name:
+        </div>
+        <div class="col2">
         <input type="text" name="name" placeholder="Name">
+        </div>
     </label>
+    <div class="col">
     <label for="bloodtype">Blood Type:
-       <select name="bloodtype" id="bloodtype">Choose
-        <option value="O+ve"></option>
-        <option value="O-ve"></option>
-        <option value="AB+ve"></option>
-        <option value="AB-ve"></option>
-        <option value="A+ve"></option>
+        </div>
+          <div class="col2">
+       <select name="bloodtype" id="bloodtype">
+        <option value="" disabled selected>Choose</option>
+        <option value="O+ve">O+ve</option>
+        <option value="O-ve">O-ve</option>
+        <option value="AB+ve">AB+ve</option>
+        <option value="AB-ve">AB-ve</option>
+        <option value="A+ve">A+ve</option>
        </select>
+       </div>
     </label>
     <label for="age">Age:
         <input type="number" name="age" placeholder="Age">
