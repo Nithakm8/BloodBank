@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BloodBank</title>
+    <style>
+      *{
+        padding: 0px;
+        margin: 0px;
+      }
+      body{
+        background-color: rgb(189, 116, 116);
+        margin: 50px;
+      }
+      #donars{
+        display: flex;
+      }
+      .donars{
+        display: flex;
+        flex-direction: row;
+      }
+      .add1{
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        background-color: green;
+        border-radius: 9px;
+      }
+      nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
 </head>
 <body>
-  <h1>Home Page</h1> 
-  <a href="pages/add.html">Add</a> 
-  <table>
-    <tbody>
-      <thead>
+  <nav>
+  <a href="pages/add.html" class="add1">Add</a> 
+  </nav>
 
-      </thead>
-        <tr>
-          <th>Name</th>
-          <th>BloodType</th>
-          <th>age</th>
-        </tr>
-      
-    </tbody>
-  </table>
   <div id="donars">
     
   </div>
