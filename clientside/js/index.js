@@ -14,9 +14,10 @@ async function getDonar(){
       <h3>Phone Number:${donar.phnumber}</h3>
       <h3>Last Donated Date:${donar.date}</h3>
     </div>
-    <div>
+    <div class="btn">
     <button  class='editbtn' onclick='handleEdit("${donar.name}")'>EDIT</button>
     <button  class='deletebtn' onclick='handleDelete("${donar.name}")'>DELETE</button>
+    </div>
     `
     })
     document.getElementById('donars').innerHTML=str  
