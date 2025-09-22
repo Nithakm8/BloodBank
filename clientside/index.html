@@ -10,27 +10,16 @@
         margin: 0px;
       }
       body{
-        background-color: rgb(189, 116, 116);
+        /* background-color: rgb(189, 116, 116); */
+        background-image: url('https://static.vecteezy.com/system/resources/previews/008/191/708/non_2x/human-blood-donate-and-heart-rate-on-white-background-free-vector.jpg');
+        background-repeat: no-repeat;
+        background-size:40% 40% ;
+        background-position: top;
         margin: 50px;
       }
-      #donars{
-        display: flex;
-        margin: 50px;
-      
-      }
-      .donar{
-        display: flex;
-        flex-direction: column;
-        border:1px solid;
-        border: none;
-        border-radius: 8px;
-        padding: 5px;
-        box-shadow: 3px 3px 3px 5px rgb(155, 80, 80);
-        font-size: 13px;
-        font-family: Arial, Helvetica, sans-serif;
-        
-      }
-      .search{
+    
+     
+      #search{
        padding-left: 5px;
         width: 250px;
         height: 30px;
@@ -38,6 +27,7 @@
         border: 1px solid rgb(228, 188, 188);
         border-radius: 8px;
         box-shadow: 2px 2px 2px 5px rgb(224, 93, 93);
+        margin-bottom: 40px;
       }
       .add1{
         padding: 10px;
@@ -45,7 +35,8 @@
         color: white;
         background-color: green;
         border-radius: 9px;
-        margin-left:00px;
+        margin-bottom: 40px;
+        margin-right: 100px;
         
             }
       nav{
@@ -77,18 +68,43 @@
           background-color: red;
           color: white;
       }
+      table{
+        margin: auto;
+      }
+      td{
+        min-width: 100px;
+       
+      }
+      input{
+        text-align: center;
+      }
     </style>
 </head>
 <body>
   <h1 style="color: rgb(228, 23, 23);
    margin: 50px;">Donar Details</h1>
   <nav>
-   <input type=" search" class="search" placeholder="search">
+   <input type=" search" id="search" placeholder="search" >
   <a href="pages/add.html" class="add1">Add</a> 
   </nav>
 
-  <div id="donars">
-    
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>BloodType</th>
+          <th>Age</th>
+          <th>Weight</th>
+          <th>Phone Number</th>
+          <th>Last Donated Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="donars">
+     
+      </tbody>
+    </table>
   </div>
   <script src="js/index.js"></script>
 </body>
