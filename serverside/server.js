@@ -49,6 +49,44 @@ const app=http.createServer(async(req,res)=>{
         res.writeHead(200,{'content-type':"text/json"})  
         res.end(jsonData)      
     }
+    if(pathname=='/updatedonar' && req.method=="PUT"){
+        console.log('update');
+        
+        let body=""
+        req.on('data',(chunks)=>{
+            body+=chunks.toString()
+            console.log(body);
+            
+        })
+        req.on('end',()=>{
+            let data=JSON.parse(body)
+            console.log(data);
+            
+        })
+          req.on('end',()=>{
+            let data=JSON.parse(body)
+            const _id=new ObjectId(data.id)
+            let updatedonar={
+                name:data.name,
+                bloodtype:data.bloodtype,
+                age:data.age,
+                weight:data.weight,
+                phnumber:data.phnumber,
+                date:data.date
+            }
+            collection.updateOne({_id},{$set:updatedonar}).then(()=>{
+                res.writeHead(200,{"content-type":"text/plain"})
+                res.end("success")
+            }).catch((err)=>{
+                console.log(err);
+                res.writeHead(200,{"content-type":"text/plain"})
+                res.end('Failed')
+                
+            })
+        })
+
+
+    }
     if(pathname=='/delete' && req.method=='DELETE'){
         let body=""
         req.on('data',(chunks)=>{
@@ -56,6 +94,8 @@ const app=http.createServer(async(req,res)=>{
             console.log(body);
             
         })
+      
+
         req.on('end',()=>{
             let _id=new ObjectId(body)
             collection.deleteOne({_id}).then(()=>{
